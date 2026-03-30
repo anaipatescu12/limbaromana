@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chimie & Fizică — Liceul Teoretic „Ana Ipătescu"</title>
+<title>Limba și literatura română — Liceul Teoretic „Ana Ipătescu"</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 :root {
-  --ch: #1a6b3a;
-  --ch-light: #e6f4ec;
-  --ch-mid: #2d9e58;
-  --ph: #1a3f6b;
-  --ph-light: #e6eef8;
-  --ph-mid: #2d68b0;
-  --accent: #c45c14;
-  --accent-light: #fdf0e6;
-  --dark: #0f1923;
-  --text: #1c2b3a;
-  --muted: #6b7c8d;
-  --border: #e0e8f0;
-  --bg: #f8fafc;
+  --ch: #7b1e3a;
+  --ch-light: #f9eaf0;
+  --ch-mid: #b14369;
+  --ph: #2e2a6f;
+  --ph-light: #ececff;
+  --ph-mid: #5a52b5;
+  --accent: #c9932f;
+  --accent-light: #fff6e7;
+  --dark: #1e1a2b;
+  --text: #2a2438;
+  --muted: #7b728f;
+  --border: #e7deef;
+  --bg: #fcf9ff;
   --white: #ffffff;
   --serif: 'DM Serif Display', Georgia, serif;
   --sans: 'DM Sans', system-ui, sans-serif;
@@ -199,7 +199,7 @@ nav {
   justify-content: center;
 }
 
-/* Animated molecular/atomic background */
+/* Animated decorative background */
 .hero-canvas {
   position: absolute;
   inset: 0;
@@ -446,8 +446,6 @@ section { padding: 96px 0; }
   align-items: start;
 }
 
-.activities-text {}
-
 .activities-feature {
   display: flex;
   flex-direction: column;
@@ -671,7 +669,6 @@ footer strong {
 .stats-inner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  divide: both;
 }
 
 .stat-item {
@@ -762,8 +759,8 @@ footer strong {
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <div class="logo-icon"><i class="fas fa-flask"></i></div>
-    Chimie & Fizică
+    <div class="logo-icon"><i class="fas fa-book-open"></i></div>
+    Limba Română
   </a>
   <ul class="nav-links">
     <li><a href="#about">Despre</a></li>
@@ -778,8 +775,8 @@ footer strong {
 <section class="hero" id="about">
   <div class="hero-left">
     <p class="hero-eyebrow animate-in">Liceul Teoretic „Ana Ipătescu" · Gherla</p>
-    <h1 class="animate-in delay-1">Știința <em>vieții</em> și a universului</h1>
-    <p class="hero-sub animate-in delay-2">Explorăm lumea atomilor și a legilor naturii. De la experimente în laborator la olimpiade naționale — chimia și fizica devin pasiune.</p>
+    <h1 class="animate-in delay-1">Puterea <em>cuvântului</em> și a ideilor</h1>
+    <p class="hero-sub animate-in delay-2">Descoperim frumusețea limbii române prin literatură, gramatică și comunicare. De la ateliere creative la olimpiade naționale — lectura și scrisul devin pasiune.</p>
     <div class="hero-cta animate-in delay-3">
       <a href="#profesori" class="btn-primary">
         <i class="fas fa-users"></i> Cunoaște-ți viitorii profesori
@@ -791,14 +788,14 @@ footer strong {
   </div>
   <div class="hero-right">
     <svg class="hero-canvas" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
-      <!-- Atomic orbits decoration -->
+      <!-- Decorative circles -->
       <circle cx="300" cy="400" r="80" fill="none" stroke="#5dd68a" stroke-width="1" opacity="0.4"/>
       <circle cx="300" cy="400" r="140" fill="none" stroke="#6aabf0" stroke-width="0.5" opacity="0.3"/>
       <circle cx="300" cy="400" r="200" fill="none" stroke="#5dd68a" stroke-width="0.5" opacity="0.2"/>
       <circle cx="300" cy="400" r="260" fill="none" stroke="#6aabf0" stroke-width="0.5" opacity="0.15"/>
-      <!-- Nucleus -->
+      <!-- Core -->
       <circle cx="300" cy="400" r="12" fill="#5dd68a" opacity="0.6"/>
-      <!-- Electrons -->
+      <!-- Floating points -->
       <circle cx="380" cy="400" r="5" fill="#6aabf0" opacity="0.8"/>
       <circle cx="230" cy="340" r="4" fill="#5dd68a" opacity="0.7"/>
       <circle cx="350" cy="480" r="4" fill="#6aabf0" opacity="0.6"/>
@@ -808,7 +805,7 @@ footer strong {
       <circle cx="520" cy="600" r="3" fill="#5dd68a" opacity="0.3"/>
       <circle cx="80" cy="650" r="5" fill="#6aabf0" opacity="0.2"/>
       <circle cx="160" cy="700" r="2" fill="#5dd68a" opacity="0.25"/>
-      <!-- Molecular bond lines -->
+      <!-- Connecting lines -->
       <line x1="100" y1="150" x2="160" y2="200" stroke="#5dd68a" stroke-width="1" opacity="0.2"/>
       <line x1="480" y1="100" x2="420" y2="160" stroke="#6aabf0" stroke-width="1" opacity="0.15"/>
       <line x1="520" y1="600" x2="460" y2="560" stroke="#5dd68a" stroke-width="1" opacity="0.2"/>
@@ -818,14 +815,14 @@ footer strong {
     </svg>
     <div class="hero-visual">
       <div class="hero-panel ch">
-        <div class="hero-panel-icon">⚗️</div>
-        <h3>Chimie</h3>
-        <p>Substanțe, reacții și transformarea materiei</p>
+        <div class="hero-panel-icon">📚</div>
+        <h3>Literatură</h3>
+        <p>Autori, opere și lumi construite prin cuvinte</p>
       </div>
       <div class="hero-panel ph">
-        <div class="hero-panel-icon">⚛️</div>
-        <h3>Fizică</h3>
-        <p>Legi, forțe și misterele universului</p>
+        <div class="hero-panel-icon">✍️</div>
+        <h3>Limbă</h3>
+        <p>Gramatică, exprimare clară și comunicare corectă</p>
       </div>
     </div>
   </div>
@@ -840,11 +837,11 @@ footer strong {
     </div>
     <div class="stat-item reveal">
       <span class="stat-num">2</span>
-      <span class="stat-label">Laboratoare</span>
+      <span class="stat-label">Cercuri de lectură</span>
     </div>
     <div class="stat-item reveal">
       <span class="stat-num">∞</span>
-      <span class="stat-label">Experimente</span>
+      <span class="stat-label">Eseuri & creații</span>
     </div>
     <div class="stat-item reveal">
       <span class="stat-num">🏆</span>
@@ -857,29 +854,29 @@ footer strong {
 <section id="activitati">
   <div class="container">
     <p class="section-tag reveal"><i class="fas fa-star"></i> De ce contează</p>
-    <h2 class="section-title reveal">Fiecare experiment<br>este o descoperire</h2>
-    <p class="section-desc reveal">Chimia și fizica nu sunt doar materii — sunt instrumente pentru a înțelege realitatea din jurul nostru.</p>
+    <h2 class="section-title reveal">Fiecare text<br>deschide o lume</h2>
+    <p class="section-desc reveal">Limba și literatura română nu sunt doar discipline școlare — sunt instrumente pentru gândire, empatie și exprimare autentică.</p>
 
     <div class="why-grid reveal">
       <div class="why-card ch">
-        <div class="why-icon"><i class="fas fa-flask"></i></div>
-        <h3>De ce Chimie?</h3>
-        <p>Ne ajută să înțelegem din ce este alcătuită lumea și cum se transformă materia. Explică procesele vieții, având un rol esențial în medicină și tehnologie.</p>
+        <div class="why-icon"><i class="fas fa-book"></i></div>
+        <h3>De ce Literatură?</h3>
+        <p>Literatura dezvoltă imaginația, cultura generală și spiritul critic. Prin texte, elevii înțeleg mai bine oamenii, epocile și propriile emoții.</p>
       </div>
       <div class="why-card ph">
-        <div class="why-icon"><i class="fas fa-atom"></i></div>
-        <h3>De ce Fizică?</h3>
-        <p>Fizica explică legile fundamentale ale naturii: mișcarea, energia și lumina. Este baza tehnologiilor moderne care ne înconjoară zi de zi.</p>
+        <div class="why-icon"><i class="fas fa-pen-fancy"></i></div>
+        <h3>De ce Limba română?</h3>
+        <p>Stăpânirea limbii române înseamnă exprimare clară, argumentare corectă și încredere în comunicare, abilități esențiale în orice domeniu.</p>
       </div>
       <div class="why-card acc">
-        <div class="why-icon"><i class="fas fa-microscope"></i></div>
+        <div class="why-icon"><i class="fas fa-scroll"></i></div>
         <h3>Ce resurse avem?</h3>
-        <p>Laboratoare dotate cu eprubete, substanțe reactive, circuite electrice, senzori și aparate de măsură digitale de ultimă generație.</p>
+        <p>Bibliotecă școlară, platforme educaționale, antologii, materiale multimedia și ateliere de scriere creativă pentru învățare aplicată.</p>
       </div>
       <div class="why-card dk">
         <div class="why-icon"><i class="fas fa-trophy"></i></div>
         <h3>Unde participăm?</h3>
-        <p>Olimpiade județene și naționale, concursuri de robotică, vizite la UTCN și proiecte de cercetare practică în laboratoare universitare.</p>
+        <p>Olimpiade județene și naționale, concursuri de recitare și creație, dezbateri, proiecte culturale și parteneriate educaționale.</p>
       </div>
     </div>
   </div>
@@ -890,58 +887,68 @@ footer strong {
   <div class="container">
     <p class="section-tag reveal"><i class="fas fa-chalkboard-teacher"></i> Echipa noastră</p>
     <h2 class="section-title reveal">Profesori pasionați,<br>rezultate remarcabile</h2>
-    <p class="section-desc reveal">O echipă dedicată care inspiră generații de elevi să exploreze lumea științelor exacte.</p>
+    <p class="section-desc reveal">O echipă dedicată care inspiră generații de elevi să iubească lectura, limba română și comunicarea autentică.</p>
 
-    <span class="dept-label ch reveal"><i class="fas fa-flask" style="margin-right:6px"></i> Catedra de Chimie</span>
+    <span class="dept-label ch reveal"><i class="fas fa-book" style="margin-right:6px"></i> Catedra de Limba și literatura română</span>
     <div class="teachers-row">
       <div class="teacher-card reveal">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/laurenta.png" class="teacher-avatar" alt="Bărăian Laurența" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="teacher-avatar-placeholder ch-avatar" style="display:none">BL</div>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="teacher-avatar" alt="Ielcean Claudia" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="teacher-avatar-placeholder ch-avatar" style="display:none">IC</div>
         <div class="teacher-info">
-          <h4>Bărăian Laurența</h4>
-          <span class="ch-label">Profesor de Chimie</span>
+          <h4>Ielcean Claudia</h4>
+          <span class="ch-label">Profesor de Limba română</span>
         </div>
       </div>
       <div class="teacher-card reveal delay-1">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/Dunca-livia1.png" class="teacher-avatar" alt="Dunca Livia" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="teacher-avatar-placeholder ch-avatar" style="display:none">DL</div>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="teacher-avatar" alt="Dumitrescu Ioana" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="teacher-avatar-placeholder ch-avatar" style="display:none">DI</div>
         <div class="teacher-info">
-          <h4>Dunca Livia</h4>
-          <span class="ch-label">Profesor de Chimie</span>
+          <h4>Dumitrescu Ioana</h4>
+          <span class="ch-label">Profesor de Limba română</span>
         </div>
       </div>
       <div class="teacher-card reveal delay-2">
-        <div class="teacher-avatar-placeholder ch-avatar">MD</div>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="teacher-avatar" alt="Rus Adriana" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="teacher-avatar-placeholder ch-avatar" style="display:none">RA</div>
         <div class="teacher-info">
-          <h4>Mureșan Doina</h4>
-          <span class="ch-label">Profesor de Chimie</span>
+          <h4>Rus Adriana</h4>
+          <span class="ch-label">Profesor de Limba română</span>
         </div>
       </div>
     </div>
 
-    <span class="dept-label ph reveal"><i class="fas fa-atom" style="margin-right:6px"></i> Catedra de Fizică</span>
+    <span class="dept-label ph reveal"><i class="fas fa-pen-nib" style="margin-right:6px"></i> Echipa extinsă</span>
     <div class="teachers-row">
       <div class="teacher-card reveal">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/cioaba.png" class="teacher-avatar" alt="Cioabă Felicia" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="teacher-avatar-placeholder ph-avatar" style="display:none">CF</div>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="teacher-avatar" alt="Muresan Mihaela" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="teacher-avatar-placeholder ph-avatar" style="display:none">MM</div>
         <div class="teacher-info">
-          <h4>Cioabă Felicia</h4>
-          <span class="ph-label">Profesor de Fizică</span>
+          <h4>Muresan Mihaela</h4>
+          <span class="ph-label">Profesor de Limba română</span>
         </div>
       </div>
       <div class="teacher-card reveal delay-1">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/cosminavadann.png" class="teacher-avatar" alt="Vădan Cosmina" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="teacher-avatar-placeholder ph-avatar" style="display:none">VC</div>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="teacher-avatar" alt="Pop Elena" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="teacher-avatar-placeholder ph-avatar" style="display:none">PE</div>
         <div class="teacher-info">
-          <h4>Vădan Cosmina</h4>
-          <span class="ph-label">Profesor de Fizică</span>
+          <h4>Pop Elena</h4>
+          <span class="ph-label">Profesor de Limba română</span>
         </div>
       </div>
       <div class="teacher-card reveal delay-2">
-        <div class="teacher-avatar-placeholder ph-avatar">TD</div>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="teacher-avatar" alt="Chender Nicoleta" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="teacher-avatar-placeholder ph-avatar" style="display:none">CN</div>
         <div class="teacher-info">
-          <h4>Tetean Dinu</h4>
-          <span class="ph-label">Profesor de Fizică</span>
+          <h4>Chender Nicoleta</h4>
+          <span class="ph-label">Profesor de Limba română</span>
+        </div>
+      </div>
+      <div class="teacher-card reveal delay-3">
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="teacher-avatar" alt="Piticaru Raluca" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="teacher-avatar-placeholder ph-avatar" style="display:none">PR</div>
+        <div class="teacher-info">
+          <h4>Piticaru Raluca</h4>
+          <span class="ph-label">Profesor de Limba română</span>
         </div>
       </div>
     </div>
@@ -955,35 +962,35 @@ footer strong {
       <div class="activities-text">
         <p class="section-tag ch reveal"><i class="fas fa-rocket"></i> Ce facem</p>
         <h2 class="section-title reveal">Dincolo de manual</h2>
-        <p class="section-desc reveal">Explorarea nu se oprește la ușa sălii de clasă. Mergem acolo unde știința prinde viață.</p>
+        <p class="section-desc reveal">Învățarea nu se oprește la lecția clasică. Construim contexte în care limba română devine vie, actuală și relevantă.</p>
       </div>
       <div class="activities-feature">
         <div class="activity-item reveal">
           <span class="activity-num">01</span>
           <div class="activity-content">
-            <h4>Laborator & Experimente</h4>
-            <p>Sinteze chimice, reacții spectaculare și experimente de fizică aplicate la probleme reale.</p>
+            <h4>Atelier de lectură</h4>
+            <p>Lectură ghidată, interpretări de text și discuții pe teme literare adaptate fiecărei vârste.</p>
           </div>
         </div>
         <div class="activity-item reveal delay-1">
           <span class="activity-num">02</span>
           <div class="activity-content">
-            <h4>Robotică & Tehnologie</h4>
-            <p>Proiectăm și programăm roboți. Fizica devine concretă prin inginerie.</p>
+            <h4>Scriere creativă & media</h4>
+            <p>Compuneri, eseuri, podcasturi și proiecte digitale care dezvoltă exprimarea personală.</p>
           </div>
         </div>
         <div class="activity-item reveal delay-2">
           <span class="activity-num">03</span>
           <div class="activity-content">
-            <h4>Vizite & Explorări</h4>
-            <p>UTCN, Pompierii, drumeții în natură și Săptămâna Spațiului.</p>
+            <h4>Vizite culturale</h4>
+            <p>Biblioteci, teatre, muzee și întâlniri cu autori sau invitați din zona culturală.</p>
           </div>
         </div>
         <div class="activity-item reveal delay-3">
           <span class="activity-num">04</span>
           <div class="activity-content">
-            <h4>Olimpiade Județene & Naționale</h4>
-            <p>Pregătire intensivă și participare la competițiile de top din țară.</p>
+            <h4>Concursuri & Olimpiade</h4>
+            <p>Pregătire constantă pentru olimpiade, concursuri de creație, dezbateri și public speaking.</p>
           </div>
         </div>
       </div>
@@ -995,117 +1002,63 @@ footer strong {
 <section class="media-section" id="galerie">
   <div class="container">
     <p class="section-tag ph reveal"><i class="fas fa-images"></i> Galerie</p>
-    <h2 class="section-title reveal">Momente din laborator<br>și de pe teren</h2>
-    <p class="section-desc reveal">Imagini și filmări din activitățile noastre de-a lungul anului.</p>
+    <h2 class="section-title reveal">Momente din sala de clasă<br>și din proiecte culturale</h2>
+    <p class="section-desc reveal">Imagini și filmări din activitățile noastre desfășurate pe parcursul anului școlar.</p>
 
-    <!-- Sub-section: Chimie -->
-    <p class="dept-label ch reveal" style="margin-bottom: 20px;"><i class="fas fa-flask" style="margin-right:6px"></i> Laborator de Chimie</p>
-    <div class="media-grid reveal" style="margin-bottom: 40px;">
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/laborator_chimie.png" alt="Laborator chimie">
-        <div class="media-label">Laboratorul nostru</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/chimie1.jpg" alt="Chimie 1">
-        <div class="media-label">Experimente chimice</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/chimie2.jpg" alt="Chimie 2">
-        <div class="media-label">Reacții spectaculare</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/chimie3.jpg" alt="Chimie 3">
-        <div class="media-label">Sinteze chimice</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/chimie4.jpg" alt="Chimie 4">
-        <div class="media-label">Lucru în laborator</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/chimie92.jpg" alt="Chimie 92">
-        <div class="media-label">Analiză chimică</div>
-      </div>
-    </div>
-
-    <!-- Sub-section: Fizică -->
-    <p class="dept-label ph reveal" style="margin-bottom: 20px;"><i class="fas fa-atom" style="margin-right:6px"></i> Fizică & Tehnologie</p>
-    <div class="media-grid reveal" style="margin-bottom: 40px;">
-      <div class="media-item" style="grid-row: span 2;">
-        <video controls style="width:100%;height:100%;object-fit:cover;display:block;">
-          <source src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/robot_fizica.mp4" type="video/mp4">
-        </video>
-        <div class="media-label">🤖 Robotică</div>
-      </div>
-      <div class="media-item">
-        <video controls style="width:100%;height:100%;object-fit:cover;display:block;">
-          <source src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/experiment_fizica.mp4" type="video/mp4">
-        </video>
-        <div class="media-label">▶ Experiment live</div>
-      </div>
-      <div class="media-item">
-        <video controls style="width:100%;height:100%;object-fit:cover;display:block;">
-          <source src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/experiment_fizica2.mp4" type="video/mp4">
-        </video>
-        <div class="media-label">▶ Experiment live 2</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/expfizica1.jpg" alt="Experiment fizica">
-        <div class="media-label">Aplicații practice</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/experiment_fizicachimie.jpg" alt="Experiment fizica chimie">
-        <div class="media-label">Fizică & Chimie</div>
-      </div>
-    </div>
-
-    <!-- Sub-section: Explorări -->
-    <p class="dept-label reveal" style="margin-bottom: 20px; background: rgba(196,92,20,0.12); color: var(--accent);"><i class="fas fa-map-marked-alt" style="margin-right:6px"></i> Vizite & Explorări</p>
-    <div class="media-grid reveal" style="margin-bottom: 40px;">
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/utcn_fizica.jpg" alt="UTCN">
-        <div class="media-label">Vizite UTCN</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/pompieri_fizica.jpg" alt="Pompieri">
-        <div class="media-label">La Pompieri</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/drumetie_fizica_chimie.jpg" alt="Drumetie">
-        <div class="media-label">În natură</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/sapt_spatiului.jpg" alt="Spatiu">
-        <div class="media-label">Săptămâna Spațiului</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/energie_regenerabila.jpg" alt="Energie regenerabila">
-        <div class="media-label">Energie regenerabilă</div>
-      </div>
-    </div>
-
-    <!-- Sub-section: Prezentări & Momente speciale -->
-    <p class="dept-label reveal" style="margin-bottom: 20px; background: rgba(26,63,107,0.1); color: var(--ph-mid);"><i class="fas fa-star" style="margin-right:6px"></i> Prezentări & Momente speciale</p>
+    <p class="dept-label ch reveal" style="margin-bottom: 20px;"><i class="fas fa-images" style="margin-right:6px"></i> Activități și proiecte</p>
     <div class="media-grid reveal">
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/prezentare_fizica.jpg" alt="Prezentare fizica">
-        <div class="media-label">Prezentare fizică</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/prez_fizica2.jpg" alt="Prezentare fizica 2">
-        <div class="media-label">Prezentare fizică 2</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/fizicap1.jpg" alt="Fizica p1">
-        <div class="media-label">Fizică aplicată</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/fizica_costumatii.jpg" alt="Costumatii">
-        <div class="media-label">Costumaţii & Roluri</div>
-      </div>
-      <div class="media-item">
-        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/9a_fizica.jpg" alt="9a fizica">
-        <div class="media-label">Clasa 9A</div>
-      </div>
+      <div class="media-item"><img src="1_decembrie.jpg" alt="1 Decembrie"><div class="media-label">1 decembrie</div></div>
+      <div class="media-item"><img src="act_antidrog_teenchallengeromania1.jpg" alt="Act anti-drog Teen Challenge Romania 1"><div class="media-label">Act anti-drog teenchallengeromania1</div></div>
+      <div class="media-item"><img src="act_antidrog_teenchallengeromania2.jpg" alt="Act anti-drog Teen Challenge Romania 2"><div class="media-label">Act anti-drog teenchallengeromania2</div></div>
+      <div class="media-item"><img src="atelier_creatie_stufaris_Sic.jpg" alt="Atelier creație Stufăriș Sic"><div class="media-label">Atelier creație stufăriș Sic</div></div>
+      <div class="media-item"><img src="centenar1918.jpg" alt="Centenar 1918"><div class="media-label">Centenar 1918</div></div>
+      <div class="media-item"><img src="citind.jpg" alt="Citind"><div class="media-label">Citind</div></div>
+      <div class="media-item"><img src="excursie sibiu.jpg" alt="Excursie Sibiu"><div class="media-label">Excursie Sibiu</div></div>
+      <div class="media-item"><img src="excursie_din nou....jpg" alt="Excursie din nou"><div class="media-label">Excursie din nou</div></div>
+      <div class="media-item"><img src="exp_chimice.jpg" alt="Exp chimice"><div class="media-label">Exp chimice</div></div>
+      <div class="media-item"><img src="grup_linia_frontului_reconstituire_ww2.jpg" alt="Grup linia frontului reconstituire WW2"><div class="media-label">Grup linia frontului WW2</div></div>
+      <div class="media-item"><img src="horaunirii.jpg" alt="Hora unirii"><div class="media-label">Hora unirii</div></div>
+      <div class="media-item"><img src="incondeiere_oua_fundatia_teka.jpg" alt="Încondeiere ouă Fundația Teka"><div class="media-label">Încondeiere ouă Teka</div></div>
+      <div class="media-item"><img src="incondeiere_oua_fundatia_teka2.jpg" alt="Încondeiere ouă Fundația Teka 2"><div class="media-label">Încondeiere ouă Teka 2</div></div>
+      <div class="media-item"><img src="limba_romana_proiecte.jpg" alt="Limba română proiecte"><div class="media-label">Limba română proiecte</div></div>
+      <div class="media-item"><img src="lions_ascoiatie.jpg" alt="Lions ascoiație"><div class="media-label">Lions ascoiatie</div></div>
+      <div class="media-item"><img src="lucru_manual_teka1.jpg" alt="Lucru manual Teka 1"><div class="media-label">Lucru manual Teka 1</div></div>
+      <div class="media-item"><img src="lucru_manual_teka2.jpg" alt="Lucru manual Teka 2"><div class="media-label">Lucru manual Teka 2</div></div>
+      <div class="media-item"><img src="mihaieminescu.jpg" alt="Mihai Eminescu"><div class="media-label">Mihai Eminescu</div></div>
+      <div class="media-item"><img src="olarit_teka.2jpg.jpg" alt="Olărit Teka 2"><div class="media-label">Olărit Teka 2</div></div>
+      <div class="media-item"><img src="olarit_teka.jpg" alt="Olărit Teka"><div class="media-label">Olărit Teka</div></div>
+      <div class="media-item"><img src="politie1.jpg" alt="Poliție 1"><div class="media-label">Politie 1</div></div>
+      <div class="media-item"><img src="politie2.jpg" alt="Poliție 2"><div class="media-label">Politie 2</div></div>
+      <div class="media-item"><img src="poza_grup_excursie.jpg" alt="Poza grup excursie"><div class="media-label">Poza grup excursie</div></div>
+      <div class="media-item"><img src="poza_grup_teka.jpg" alt="Poza grup Teka"><div class="media-label">Poza grup Teka</div></div>
+      <div class="media-item"><img src="prim_ajutor_2_scoala.jpg" alt="Prim ajutor 2 școală"><div class="media-label">Prim ajutor 2 școală</div></div>
+      <div class="media-item"><img src="prim_ajutor_in_scoli.jpg" alt="Prim ajutor în școli"><div class="media-label">Prim ajutor în școli</div></div>
+      <div class="media-item"><img src="prim_ajutor_usamv.jpg" alt="Prim ajutor USAMV"><div class="media-label">Prim ajutor USAMV</div></div>
+      <div class="media-item"><img src="proiecte_limba_romana_romantism.jpg" alt="Proiecte limba română romantism"><div class="media-label">Proiecte romantism</div></div>
+      <div class="media-item"><img src="selfie_absolventi_12b.jpg" alt="Selfie absolvenți 12B"><div class="media-label">Selfie absolvenți 12B</div></div>
+      <div class="media-item"><img src="selfie_absolventi_12b1.jpg" alt="Selfie absolvenți 12B 1"><div class="media-label">Selfie absolvenți 12B 1</div></div>
+      <div class="media-item"><img src="selfie_usamv.jpg" alt="Selfie USAMV"><div class="media-label">Selfie USAMV</div></div>
+      <div class="media-item"><img src="selfie_via_transilvanica.jpg" alt="Selfie Via Transilvanica"><div class="media-label">Selfie Via Transilvanica</div></div>
+      <div class="media-item"><img src="sic2.jpg" alt="Sic 2"><div class="media-label">Sic 2</div></div>
+      <div class="media-item"><img src="simulareww2.jpg" alt="Simulare WW2"><div class="media-label">Simulare WW2</div></div>
+      <div class="media-item"><img src="tabara_via.jpg" alt="Tabără Via"><div class="media-label">Tabără Via</div></div>
+      <div class="media-item"><img src="targ_caritabil.jpg" alt="Târg caritabil"><div class="media-label">Târg caritabil</div></div>
+      <div class="media-item"><img src="tibi_useriu_la_liceul_teoretic_Ana Ipatescu.jpg" alt="Tibi Ușeriu la Liceul Teoretic Ana Ipătescu"><div class="media-label">Tibi Ușeriu la liceu</div></div>
+      <div class="media-item"><img src="urmarind_filmul.jpg" alt="Urmărind filmul"><div class="media-label">Urmărind filmul</div></div>
+      <div class="media-item"><img src="usamv.jpg" alt="USAMV"><div class="media-label">USAMV</div></div>
+      <div class="media-item"><img src="viatransilvanica1.jpg" alt="Via Transilvanica 1"><div class="media-label">Via Transilvanica 1</div></div>
+      <div class="media-item"><img src="viatransilvanicatabara.jpg" alt="Via Transilvanica tabără"><div class="media-label">Via Transilvanica tabără</div></div>
+      <div class="media-item"><img src="vizita_biblioteca_oct. goga _ cluj.jpg" alt="Vizită Biblioteca Oct. Goga Cluj"><div class="media-label">Vizită Biblioteca Oct. Goga</div></div>
+      <div class="media-item"><img src="vizita_biserica armeneasca gherla.jpg" alt="Vizită biserica armenească Gherla"><div class="media-label">Vizită biserica armenească</div></div>
+      <div class="media-item"><img src="vizita_la_casa_romantei_targoviste_1.jpg" alt="Vizită la Casa Românței Târgoviște 1"><div class="media-label">Casa Românței 1</div></div>
+      <div class="media-item"><img src="vizita_la_casa_romantei_targoviste_2.jpg" alt="Vizită la Casa Românței Târgoviște 2"><div class="media-label">Casa Românței 2</div></div>
+      <div class="media-item"><img src="vizita_la_usamv_1.jpg" alt="Vizită la USAMV 1"><div class="media-label">Vizită la USAMV 1</div></div>
+      <div class="media-item"><img src="vizita_la_usamv_2.jpg" alt="Vizită la USAMV 2"><div class="media-label">Vizită la USAMV 2</div></div>
+      <div class="media-item"><img src="vizita_muzeu_gherla.jpg" alt="Vizită muzeu Gherla"><div class="media-label">Vizită muzeu Gherla</div></div>
+      <div class="media-item"><img src="vizita_rural.jpg" alt="Vizită rural"><div class="media-label">Vizită rural</div></div>
+      <div class="media-item"><img src="ziua_albastră.jpg" alt="Ziua albastră"><div class="media-label">Ziua albastră</div></div>
+      <div class="media-item"><img src="ziua_culturii_nationale1.jpg" alt="Ziua culturii naționale 1"><div class="media-label">Ziua culturii naționale 1</div></div>
+      <div class="media-item"><img src="ziua_culturii_nationale2.jpg" alt="Ziua culturii naționale 2"><div class="media-label">Ziua culturii naționale 2</div></div>
     </div>
   </div>
 </section>
@@ -1118,21 +1071,21 @@ footer strong {
 
     <div class="testimonials-grid">
       <div class="testimonial-card reveal">
-        <blockquote>„Îmi place când facem experimente. Parcă fiecare oră e o aventură nouă."</blockquote>
+        <blockquote>„Îmi place că la orele de română discutăm deschis și învățăm să ne exprimăm ideile clar."</blockquote>
         <div class="testimonial-author">
           <div class="author-dot" style="background: var(--ch)">A</div>
           <span>Ariana · Clasa 11A</span>
         </div>
       </div>
       <div class="testimonial-card reveal delay-1">
-        <blockquote>„Fizica explică viața reală. De când o studiez, văd lumea altfel."</blockquote>
+        <blockquote>„Literatura m-a ajutat să înțeleg mai bine oamenii și să privesc lumea din perspective diferite."</blockquote>
         <div class="testimonial-author">
           <div class="author-dot" style="background: var(--ph-mid)">E</div>
           <span>Eliza · Clasa 12B</span>
         </div>
       </div>
       <div class="testimonial-card reveal delay-2">
-        <blockquote>„Lucrul în echipă la experimente este cel mai fain lucru din liceu."</blockquote>
+        <blockquote>„Atelierele de scriere creativă sunt preferatele mele — simt că vocea mea contează."</blockquote>
         <div class="testimonial-author">
           <div class="author-dot" style="background: var(--accent)">A</div>
           <span>Albert · Clasa 12A</span>
@@ -1145,7 +1098,7 @@ footer strong {
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <div class="footer-logo">Chimie & Fizică</div>
+    <div class="footer-logo">Limba Română</div>
     <p><strong>Liceul Teoretic „Ana Ipătescu"</strong> · Gherla, Cluj</p>
     <p style="margin-top:8px">© 2026 · Toate drepturile rezervate</p>
   </div>
