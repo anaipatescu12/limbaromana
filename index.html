@@ -11,9 +11,9 @@
   --ch: #7b1e3a;
   --ch-light: #f9eaf0;
   --ch-mid: #b14369;
-  --ph: #2e2a6f;
-  --ph-light: #ececff;
-  --ph-mid: #5a52b5;
+  --ph: #5a1730;
+  --ph-light: #fdeef4;
+  --ph-mid: #9c2f56;
   --accent: #c9932f;
   --accent-light: #fff6e7;
   --dark: #1e1a2b;
@@ -174,7 +174,7 @@ nav {
 .btn-primary:hover {
   background: var(--ph);
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(26,63,107,0.25);
+  box-shadow: 0 8px 24px rgba(123,30,58,0.25);
 }
 
 .btn-ghost {
@@ -226,7 +226,7 @@ nav {
 }
 
 .hero-panel.ch { background: rgba(45,158,88,0.12); }
-.hero-panel.ph { background: rgba(45,104,176,0.12); }
+.hero-panel.ph { background: rgba(156,47,86,0.14); }
 
 .hero-panel-icon {
   width: 80px; height: 80px;
@@ -238,7 +238,7 @@ nav {
 }
 
 .ch .hero-panel-icon { background: rgba(45,158,88,0.2); }
-.ph .hero-panel-icon { background: rgba(45,104,176,0.2); }
+.ph .hero-panel-icon { background: rgba(156,47,86,0.24); }
 
 .hero-panel h3 {
   font-family: var(--serif);
@@ -372,7 +372,7 @@ section { padding: 96px 0; }
 }
 
 .dept-label.ch { background: rgba(45,158,88,0.15); color: #5dd68a; }
-.dept-label.ph { background: rgba(45,104,176,0.15); color: #6aabf0; }
+.dept-label.ph { background: rgba(156,47,86,0.15); color: #9c2f56; }
 
 .teachers-row {
   display: grid;
@@ -421,7 +421,7 @@ section { padding: 96px 0; }
 }
 
 .ch-avatar { background: rgba(45,158,88,0.25); }
-.ph-avatar { background: rgba(45,104,176,0.25); }
+.ph-avatar { background: rgba(156,47,86,0.25); }
 
 .teacher-info h4 {
   font-family: var(--serif);
@@ -436,7 +436,7 @@ section { padding: 96px 0; }
 }
 
 .ch-label { color: #5dd68a; }
-.ph-label { color: #6aabf0; }
+.ph-label { color: #9c2f56; }
 
 /* ========== ACTIVITIES ========== */
 .activities-layout {
@@ -465,7 +465,7 @@ section { padding: 96px 0; }
 
 .activity-item:hover {
   border-color: var(--ph-mid);
-  box-shadow: 0 4px 16px rgba(45,104,176,0.08);
+  box-shadow: 0 4px 16px rgba(156,47,86,0.1);
   transform: translateX(4px);
 }
 
@@ -790,24 +790,24 @@ footer strong {
     <svg class="hero-canvas" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
       <!-- Decorative circles -->
       <circle cx="300" cy="400" r="80" fill="none" stroke="#5dd68a" stroke-width="1" opacity="0.4"/>
-      <circle cx="300" cy="400" r="140" fill="none" stroke="#6aabf0" stroke-width="0.5" opacity="0.3"/>
+      <circle cx="300" cy="400" r="140" fill="none" stroke="#d46b91" stroke-width="0.5" opacity="0.3"/>
       <circle cx="300" cy="400" r="200" fill="none" stroke="#5dd68a" stroke-width="0.5" opacity="0.2"/>
-      <circle cx="300" cy="400" r="260" fill="none" stroke="#6aabf0" stroke-width="0.5" opacity="0.15"/>
+      <circle cx="300" cy="400" r="260" fill="none" stroke="#d46b91" stroke-width="0.5" opacity="0.15"/>
       <!-- Core -->
       <circle cx="300" cy="400" r="12" fill="#5dd68a" opacity="0.6"/>
       <!-- Floating points -->
-      <circle cx="380" cy="400" r="5" fill="#6aabf0" opacity="0.8"/>
+      <circle cx="380" cy="400" r="5" fill="#d46b91" opacity="0.8"/>
       <circle cx="230" cy="340" r="4" fill="#5dd68a" opacity="0.7"/>
-      <circle cx="350" cy="480" r="4" fill="#6aabf0" opacity="0.6"/>
+      <circle cx="350" cy="480" r="4" fill="#d46b91" opacity="0.6"/>
       <!-- Dots scattered -->
       <circle cx="100" cy="150" r="3" fill="#5dd68a" opacity="0.3"/>
-      <circle cx="480" cy="100" r="4" fill="#6aabf0" opacity="0.25"/>
+      <circle cx="480" cy="100" r="4" fill="#d46b91" opacity="0.25"/>
       <circle cx="520" cy="600" r="3" fill="#5dd68a" opacity="0.3"/>
-      <circle cx="80" cy="650" r="5" fill="#6aabf0" opacity="0.2"/>
+      <circle cx="80" cy="650" r="5" fill="#d46b91" opacity="0.2"/>
       <circle cx="160" cy="700" r="2" fill="#5dd68a" opacity="0.25"/>
       <!-- Connecting lines -->
       <line x1="100" y1="150" x2="160" y2="200" stroke="#5dd68a" stroke-width="1" opacity="0.2"/>
-      <line x1="480" y1="100" x2="420" y2="160" stroke="#6aabf0" stroke-width="1" opacity="0.15"/>
+      <line x1="480" y1="100" x2="420" y2="160" stroke="#d46b91" stroke-width="1" opacity="0.15"/>
       <line x1="520" y1="600" x2="460" y2="560" stroke="#5dd68a" stroke-width="1" opacity="0.2"/>
       <!-- Hex grid -->
       <polygon points="50,50 80,33 110,50 110,84 80,100 50,84" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.08"/>
@@ -917,7 +917,7 @@ footer strong {
       </div>
     </div>
 
-    <span class="dept-label ph reveal"><i class="fas fa-pen-nib" style="margin-right:6px"></i> Echipa extinsă</span>
+    <span class="dept-label ch reveal"><i class="fas fa-pen-nib" style="margin-right:6px"></i> Catedra de Limba și literatura română</span>
     <div class="teachers-row">
       <div class="teacher-card reveal">
         <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="teacher-avatar" alt="Muresan Mihaela" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
