@@ -541,6 +541,28 @@ section { padding: 96px 0; }
 
 .media-item:hover .media-label { opacity: 1; }
 
+.media-item.missing-image {
+  background: linear-gradient(135deg, var(--ph-light), var(--ch-light));
+}
+
+.media-item.missing-image::before {
+  content: 'Imagine indisponibila';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.media-item.missing-image .media-label {
+  opacity: 1;
+  background: linear-gradient(transparent, rgba(30,26,43,0.35));
+}
+
 .media-placeholder {
   background: linear-gradient(135deg, var(--ph-light), var(--ch-light));
   display: flex;
@@ -1127,6 +1149,38 @@ reveals.forEach((el, i) => {
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
   nav.style.boxShadow = window.scrollY > 20 ? '0 1px 20px rgba(0,0,0,0.08)' : 'none';
+});
+
+// Robust gallery image loading for GitHub Pages.
+// Tries common folder locations and URL-encoded filenames.
+const galleryImages = document.querySelectorAll('#galerie .media-item img');
+galleryImages.forEach((img) => {
+  const original = (img.getAttribute('src') || '').trim();
+  if (!original) return;
+  if (/^(https?:)?\/\//i.test(original) || original.startsWith('data:')) return;
+
+  const encoded = encodeURI(original);
+  const candidates = [
+    original,
+    encoded,
+    `images/${original}`,
+    `images/${encoded}`,
+    `img/${original}`,
+    `img/${encoded}`
+  ];
+
+  let idx = 0;
+  const parentItem = img.closest('.media-item');
+  const tryNext = () => {
+    if (idx >= candidates.length) {
+      if (parentItem) parentItem.classList.add('missing-image');
+      return;
+    }
+    img.src = candidates[idx++];
+  };
+
+  img.addEventListener('error', tryNext);
+  tryNext();
 });
 </script>
 </body>
