@@ -1153,63 +1153,100 @@ footer strong {
 </footer>
 
 <script>
-// Scroll reveal
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      e.target.style.transitionDelay = (e.target.dataset.delay || 0) + 'ms';
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+(() => {
+  const reveals = Array.from(document.querySelectorAll('.reveal'));
 
-reveals.forEach((el, i) => {
-  // stagger siblings
-  const siblings = Array.from(el.parentElement?.children || []).filter(c => c.classList.contains('reveal'));
-  const idx = siblings.indexOf(el);
-  if (idx > 0) el.dataset.delay = idx * 80;
-  observer.observe(el);
-});
-
-// Nav active
-window.addEventListener('scroll', () => {
-  const nav = document.querySelector('nav');
-  nav.style.boxShadow = window.scrollY > 20 ? '0 1px 20px rgba(0,0,0,0.08)' : 'none';
-});
-
-// Robust gallery image loading for GitHub Pages.
-// Tries common folder locations and URL-encoded filenames.
-const galleryImages = document.querySelectorAll('#galerie .media-item img');
-galleryImages.forEach((img) => {
-  const original = (img.getAttribute('src') || '').trim();
-  if (!original) return;
-  if (/^(https?:)?\/\//i.test(original) || original.startsWith('data:')) return;
-
-  const encoded = encodeURI(original);
-  const candidates = [
-    original,
-    encoded,
-    `images/${original}`,
-    `images/${encoded}`,
-    `img/${original}`,
-    `img/${encoded}`
-  ];
-
-  let idx = 0;
-  const parentItem = img.closest('.media-item');
-  const tryNext = () => {
-    if (idx >= candidates.length) {
-      if (parentItem) parentItem.classList.add('missing-image');
-      return;
-    }
-    img.src = candidates[idx++];
+  const applyVisible = (el) => {
+    const delay = Number(el.dataset.delay || 0);
+    el.style.transitionDelay = delay + 'ms';
+    el.classList.add('visible');
   };
 
-  img.addEventListener('error', tryNext);
-  tryNext();
-});
+  // Robust reveal for Safari / fast navigation
+  if (!('IntersectionObserver' in window)) {
+    reveals.forEach(applyVisible);
+  } else {
+    // stagger based on reveal siblings
+    reveals.forEach((el) => {
+      const parent = el.parentElement;
+      if (!parent) return;
+
+      const siblings = Array.from(parent.children).filter(
+        (c) => c.classList && c.classList.contains('reveal')
+      );
+      const idx = siblings.indexOf(el);
+      if (idx > 0) el.dataset.delay = String(idx * 80);
+    });
+
+    // Show items already in viewport on load (helps initial render)
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    reveals.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.bottom > 0 && r.top < vh) applyVisible(el);
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            applyVisible(e.target);
+            observer.unobserve(e.target);
+          }
+        }
+      },
+      { threshold: 0 }
+    );
+
+    reveals.forEach((el) => {
+      if (!el.classList.contains('visible')) observer.observe(el);
+    });
+  }
+
+  // Nav shadow
+  window.addEventListener(
+    'scroll',
+    () => {
+      const nav = document.querySelector('nav');
+      if (!nav) return;
+      nav.style.boxShadow =
+        window.scrollY > 20 ? '0 1px 20px rgba(0,0,0,0.08)' : 'none';
+    },
+    { passive: true }
+  );
+
+  // Robust gallery image loading for GitHub Pages.
+  // Tries common folder locations and URL-encoded filenames (handles spaces).
+  const galleryImages = document.querySelectorAll('#galerie .media-item img');
+  galleryImages.forEach((img) => {
+    const original = (img.getAttribute('src') || '').trim();
+    if (!original) return;
+    if (/^(https?:)?\/\//i.test(original) || original.startsWith('data:')) return;
+
+    const encoded = encodeURI(original);
+    const candidates = [
+      original,
+      encoded,
+      `images/${original}`,
+      `images/${encoded}`,
+      `img/${original}`,
+      `img/${encoded}`,
+    ];
+
+    let idx = 0;
+    const parentItem = img.closest('.media-item');
+
+    const tryNext = () => {
+      if (idx >= candidates.length) {
+        if (parentItem) parentItem.classList.add('missing-image');
+        return;
+      }
+      img.src = candidates[idx++];
+    };
+
+    img.addEventListener('error', tryNext);
+    tryNext();
+  });
+})();
 </script>
 </body>
 </html>
